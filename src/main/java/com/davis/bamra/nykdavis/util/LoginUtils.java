@@ -8,6 +8,10 @@ import org.apache.logging.log4j.Logger;
 
 public class LoginUtils {
 
+	private LoginUtils() {
+
+	}
+
 	private static final Logger LOGGER = LogManager.getLogger(LoginUtils.class);
 
 	public static String getEncode(String password) {
