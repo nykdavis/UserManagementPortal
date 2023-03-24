@@ -1,11 +1,10 @@
-package com.davis.bamra.nykdavis.response.dto;
+package com.davis.bamra.nykdavis.request.dto;
 
 import lombok.Data;
 
 @Data
-public class GetUserResponse {
+public class CreateUserRequest {
 
-	private int id;
 	private String userName;
 	private String fullName;
 	private String mobileNumber;

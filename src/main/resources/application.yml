@@ -22,7 +22,24 @@ spring:
     url: jdbc:mysql://localhost:3306/user_portal
     driverClassName: com.mysql.cj.jdbc.Driver
   jpa:
-    show-sql: true    
+    show-sql: true
+    hibernate:
+      hbm2ddl:
+        ddl-auto: update
+      id:
+        new_generator_mappings: true
+      mapping:
+        default_entity_mode: "pojo"
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+          show_sql: true
+        hibernate.id.new_generator_mappings: true
+        hibernate.id.table_name: hibernate_sequence
+        hibernate.id.initial_value: 1000
+        hibernate.id.increment_size: 1
+        hibernate.id.optimizer.pooled.prefer_lo: true
+        hibernate.id.optimizer.pooled.prefer_sequence_per_entity: false
   
 userPortal:
   login:

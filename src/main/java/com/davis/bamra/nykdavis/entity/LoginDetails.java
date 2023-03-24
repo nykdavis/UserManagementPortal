@@ -6,57 +6,25 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 @Entity
 @Table(name = "logindetails")
+@Data
 public class LoginDetails {
-	
+
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="Id")
-    private int id;
-	
-	@Column(name="User_Name")
-    private String userName;
-	
-	@Column(name="Pass_Word")
-    private String password;
-	
-	@Column(name="Is_Admin")
-   private Integer isAdmin;
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "Id")
+	private int id;
 
-	public int getId() {
-		return id;
-	}
+	@Column(name = "User_Name")
+	private String userName;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+	@Column(name = "Pass_Word")
+	private String password;
 
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public Integer getIsAdmin() {
-		return isAdmin;
-	}
-
-	public void setIsAdmin(Integer isAdmin) {
-		this.isAdmin = isAdmin;
-	}
-	
-	
+	@Column(name = "Is_Admin")
+	private Integer isAdmin;
 
 }

@@ -3,7 +3,9 @@ package com.davis.bamra.nykdavis.response.dto;
 import lombok.Data;
 
 @Data
-public class GetLoginResponse {
-
+public class DeleteUserResponse {
+	
 	private String message;
+	private int id;
+
 }
